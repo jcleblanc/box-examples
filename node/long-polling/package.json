@@ -1,0 +1,16 @@
+{
+  "name": "box-long-polling-example",
+  "version": "1.0.0",
+  "description": "Box Long Polling Example",
+  "main": "long_polling.js",
+  "scripts": {
+    "eslint": "./node_modules/eslint/bin/eslint.js long_polling.js"
+  },
+  "author": "Jonathan LeBlanc",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0"
+  }
+}
