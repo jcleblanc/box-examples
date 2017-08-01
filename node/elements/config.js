@@ -8,7 +8,6 @@ const jwtClientSecret = exports.jwtClientSecret = '##CLIENT SECRET##';
 // Account information
 const publicKeyId = exports.publicKeyId = '##PUBLIC KEY ID##';
 const enterpriseId = exports.enterpriseId = '##ENTERPRISE ID##';
-const userId = exports.userId = '##USER ID##';
 
 // Keys
 const keyPath = exports.privateKeyPath = 'private.pem';
