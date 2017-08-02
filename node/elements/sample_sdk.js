@@ -12,7 +12,12 @@ app.set('views', './templates');
 app.set('view engine', 'pug');
 
 // Fetch private key for signing the JWT
-const secret = fs.readFileSync(appConfig.privateKeyPath);
+let secret = '';
+try {
+  secret = fs.readFileSync(appConfig.privateKeyPath);
+} catch (err) {
+  console.error(err);
+}
 
 // Instantiate new Box SDK instance
 const sdk = new BoxSDK({
