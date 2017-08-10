@@ -7,6 +7,10 @@ The Node examples are as follows:
   * Long polling console application
   * General samples
 
+## Python Examples
+The Python examples are as follows:
+  * General samples
+
 ## Ruby Examples
 The Ruby examples are as follows: 
   * General samples
