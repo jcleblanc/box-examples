@@ -5,6 +5,10 @@ The code and content within this repo are designed as sample applications and sn
 The .Net examples are as follows:
   * General samples
 
+## Java Examples
+The Java examples are as follows:
+  * General samples
+
 ## Node Examples
 The Node examples are as follows:
   * UI Elements application skeleton (Express + Pug templates)
