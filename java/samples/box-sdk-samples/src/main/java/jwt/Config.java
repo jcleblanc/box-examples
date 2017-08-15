@@ -6,6 +6,6 @@ public class Config {
 	public static String enterprise_id = "YOUR ENTERPRISE ID";
 	public static String jwt_private_key_path = "private.pem";
 	public static String jwt_private_key_password = "YOUR PRIVATE KEY PASSWORD";
-	public static String jwt_public_key_id = "YOUR PRIVATE KEY ID";
-	public static String private_key = "/PATH/TO/YOUR/KEY/private.pem";
+	public static String jwt_public_key_id = "YOUR PUBLIC KEY ID";
+	public static String private_key = "PATH TO PRIVATE KEY FILE";
 }
