@@ -11,15 +11,17 @@ namespace net_jwt
 {
     public class Program
     {
-        static readonly string CLIENT_ID = "YOUR CLIENT ID";
-        static readonly string CLIENT_SECRET = "YOUR CLIENT SECRET";
-        static readonly string ENTERPRISE_ID = "YOUR ENTERPRISE ID";
-        static readonly string JWT_PRIVATE_KEY_PATH = "private.pem";
-        static readonly string JWT_PRIVATE_KEY_PASSWORD = "YOUR PRIVATE KEY PASSWORD";
-        static readonly string JWT_PUBLIC_KEY_ID = "YOUR PRIVATE KEY ID";
+        public static IConfigurationRoot Configuration { get; set; }
         
         static void Main(string[] args)
         {
+            // Set up configuration detail accessor
+            var builder = new ConfigurationBuilder()
+              .SetBasePath(Directory.GetCurrentDirectory())
+              .AddJsonFile("appsettings.json");
+
+            Configuration = builder.Build();
+
             Task t = MainAsync();
             t.Wait();
 
@@ -30,6 +32,13 @@ namespace net_jwt
 
         static async Task MainAsync()
         {
+            string CLIENT_ID = Configuration["Config:ClientID"];
+            string CLIENT_SECRET = Configuration["Config:ClientSecret"];
+            string ENTERPRISE_ID = Configuration["Config:EnterpriseID"];
+            string JWT_PRIVATE_KEY_PATH = Configuration["Config:PrivateKeyPath"];
+            string JWT_PRIVATE_KEY_PASSWORD = Configuration["Config:PrivateKeyPass"];
+            string JWT_PUBLIC_KEY_ID = Configuration["Config:PublicKeyID"];
+
             var privateKey = File.ReadAllText(JWT_PRIVATE_KEY_PATH);
             
             var boxConfig = new BoxConfig(CLIENT_ID, CLIENT_SECRET, ENTERPRISE_ID, privateKey, JWT_PRIVATE_KEY_PASSWORD, JWT_PUBLIC_KEY_ID);
@@ -40,10 +49,18 @@ namespace net_jwt
 
             var adminClient = boxJWT.AdminClient(adminToken);
 
-            BoxFile newFile;
+            var userRequest = new BoxUserRequest
+            {
+                Name = "John Smith",
+                IsPlatformAccessOnly = true
+            };
+            var user = await adminClient.UsersManager.CreateEnterpriseUserAsync(userRequest);
+            Console.Write("New app user created with Id = {0}", user.Id);
+
+            /*BoxFile newFile;
 
             // Create request object with name and parent folder the file should be uploaded to
-            using (FileStream stream = new FileStream(@"/PATH/TO/FILE/tax.txt", FileMode.Open))
+            using (FileStream stream = new FileStream(@"/Users/jleblanc/localhost/box/net-jwt/tax.txt", FileMode.Open))
             {
                 BoxFileRequest req = new BoxFileRequest()
                 {
@@ -51,7 +68,7 @@ namespace net_jwt
                     Parent = new BoxRequestEntity() { Id = "0" }
                 };
                 newFile = await adminClient.FilesManager.UploadAsync(req, stream);
-            }
+            }*/
         }
     }
 }

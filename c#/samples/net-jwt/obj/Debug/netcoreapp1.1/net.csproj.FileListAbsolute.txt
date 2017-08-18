@@ -1,0 +1,15 @@
+/Users/jleblanc/localhost/box/net/bin/Debug/netcoreapp1.1/net.deps.json
+/Users/jleblanc/localhost/box/net/bin/Debug/netcoreapp1.1/net.runtimeconfig.json
+/Users/jleblanc/localhost/box/net/bin/Debug/netcoreapp1.1/net.runtimeconfig.dev.json
+/Users/jleblanc/localhost/box/net/bin/Debug/netcoreapp1.1/net.dll
+/Users/jleblanc/localhost/box/net/bin/Debug/netcoreapp1.1/net.pdb
+/Users/jleblanc/localhost/box/net/obj/Debug/netcoreapp1.1/net.AssemblyInfo.cs
+/Users/jleblanc/localhost/box/net/obj/Debug/netcoreapp1.1/net.dll
+/Users/jleblanc/localhost/box/net/obj/Debug/netcoreapp1.1/net.pdb
+/Users/jleblanc/localhost/box/net/bin/Debug/netcoreapp1.1/net.dll.config
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net.deps.json
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net.runtimeconfig.json
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net.runtimeconfig.dev.json
+/Users/jleblanc/localhost/box/net-jwt/obj/Debug/netcoreapp1.1/net.AssemblyInfo.cs
+/Users/jleblanc/localhost/box/net-jwt/obj/Debug/netcoreapp1.1/net.dll
+/Users/jleblanc/localhost/box/net-jwt/obj/Debug/netcoreapp1.1/net.pdb

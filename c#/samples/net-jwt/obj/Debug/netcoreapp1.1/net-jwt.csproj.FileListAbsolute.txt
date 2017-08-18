@@ -1,0 +1,8 @@
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net-jwt.deps.json
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net-jwt.runtimeconfig.json
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net-jwt.runtimeconfig.dev.json
+/Users/jleblanc/localhost/box/net-jwt/obj/Debug/netcoreapp1.1/net-jwt.AssemblyInfo.cs
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net-jwt.dll
+/Users/jleblanc/localhost/box/net-jwt/bin/Debug/netcoreapp1.1/net-jwt.pdb
+/Users/jleblanc/localhost/box/net-jwt/obj/Debug/netcoreapp1.1/net-jwt.dll
+/Users/jleblanc/localhost/box/net-jwt/obj/Debug/netcoreapp1.1/net-jwt.pdb
