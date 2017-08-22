@@ -1,0 +1,8 @@
+/Users/jleblanc/localhost/box/net-web/bin/Debug/netcoreapp1.1/net-web.deps.json
+/Users/jleblanc/localhost/box/net-web/bin/Debug/netcoreapp1.1/net-web.runtimeconfig.json
+/Users/jleblanc/localhost/box/net-web/bin/Debug/netcoreapp1.1/net-web.runtimeconfig.dev.json
+/Users/jleblanc/localhost/box/net-web/bin/Debug/netcoreapp1.1/net-web.dll
+/Users/jleblanc/localhost/box/net-web/bin/Debug/netcoreapp1.1/net-web.pdb
+/Users/jleblanc/localhost/box/net-web/obj/Debug/netcoreapp1.1/net-web.AssemblyInfo.cs
+/Users/jleblanc/localhost/box/net-web/obj/Debug/netcoreapp1.1/net-web.dll
+/Users/jleblanc/localhost/box/net-web/obj/Debug/netcoreapp1.1/net-web.pdb
