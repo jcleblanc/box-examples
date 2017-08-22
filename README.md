@@ -17,6 +17,7 @@ The Node examples are as follows:
 
 ## Python Examples
 The Python examples are as follows:
+  * Representations API application skeleton (Flask)
   * General samples
 
 ## Ruby Examples
