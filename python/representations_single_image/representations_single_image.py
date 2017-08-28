@@ -26,9 +26,9 @@ def index():
   """Flask route for file download
   
   Search for a user by name and auth as that user. 
-  Search for a watermarked PDF file by name and capture file ID.
+  Search for a multi page file by name and capture file ID.
   Make request for representational data for that file.
-  Make request to download file
+  Make request to download file page thumbnails
   
   Returns:
      A string containing the message to be displayed to the user
@@ -43,7 +43,7 @@ def index():
   file_search = client.search(config.file_name, limit=1, offset=0)
   fid = file_search[0].get(fields=['name']).id
 
-  # Get representation data (download URI template) for watermarked PDF
+  # Get representation data (download URI template & # of pages) for produced thumbnails
   uri = "https://api.box.com/2.0/files/%s?fields=representations" % (fid)
   response = requests.get(uri, headers={'Authorization': 'Bearer ' + user_at, 'x-rep-hints': '[png?dimensions=2048x2048]'});
   file_info = response.json()
@@ -62,7 +62,7 @@ def download_file(url, localPath, at):
   """Downloads a file from Box
 
   Makes an authenticated request to the Box API to download a given
-  watermarked PDF, and save to a local file.
+  file / screenshot, and save to a local file.
   
   Returns:
      A string containing the message to be displayed to the user
