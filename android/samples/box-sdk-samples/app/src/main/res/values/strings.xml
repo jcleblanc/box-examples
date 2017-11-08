@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Box Samples</string>
+    <string name="box_button">Auth with Box</string>
+    <string name="box_logout">Logout</string>
+</resources>
