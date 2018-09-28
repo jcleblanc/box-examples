@@ -30,18 +30,26 @@ const sdk = new BoxSDK({
   }
 });
 
-// App client auth
-const client = sdk.getAppAuthClient('enterprise', appConfig.enterpriseId);
-
-// Render element via serviceName = contentExplorer, contentPicker, contentPreview, contentUploader
+// Render element via serviceName = contentExplorer, contentPicker, contentPreview, contentUploader, contentOpenWith
 app.get('/elements/:serviceName', (req, res) => {
   const service = req.params.serviceName;
+  let client;
+  let resource = `https://api.box.com/2.0/${appConfig.elementIds[service].type}s/${appConfig.elementIds[service].rid}`;
+
+  console.log(resource);
+
+  // App client or user auth
+  if (appConfig.userAuth[service] === '0') { 
+    client = sdk.getAppAuthClient('enterprise', appConfig.enterpriseId); 
+  } else { 
+    client = sdk.getAppAuthClient('user', appConfig.userAuth[service]); 
+  } 
 
   // Downscope token - https://developer.box.com/docs/special-scopes-for-box-ui-elements
   // Box content explorer scopes: https://developer.box.com/v2.0/docs/box-content-explorer#section-scopes
-  client.exchangeToken(appConfig.tokenScopes[service]).then((tokenInfo) => {
+  client.exchangeToken(appConfig.tokenScopes[service], resource).then((tokenInfo) => {
     // Render pug template sample, passing in downscoped token and the file / folder ID to render
-    res.render(service, { at: tokenInfo.accessToken, fid: appConfig.elementIds[service] });
+    res.render(service, { at: tokenInfo.accessToken, fid: appConfig.elementIds[service].fid });
   }).catch((err) => {
     console.error(err);
   });

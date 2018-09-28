@@ -38,10 +38,14 @@ Next, load up config.js and replace the following placeholder values:
 * enterpriseId: Your enterprise ID (available in the configuration section of your application).
 * keyPath (optional): If the path to your private.pem file is different than the application directory, change it here.
 * keyPass: The password for your private.pem file.
-* elementIds.contentExplorer: The folder ID to display in the content explorer UI Element.
-* elementIds.contentPicker: The folder ID to display in the content picker UI Element.
-* elementIds.contentPreview: The file ID to display in the content preview UI Element.
-* elementIds.contentUploader: The folder ID to display in the content uploader UI Element.
+* tokenScopes: The scopes to be set for each UI element.
+* elementIds: Configuration information for each UI element, consisting of the following:
+  * rid: The resource ID to downscope for (folder or file). This is needed for the Open With elements as scoping may be targeted at a folder above the file.
+  * fid: The file / folder ID to load. For all but the Open With elements this should be the same as the rid.
+  * type: The content type, either file or folder.
+* userAuth: The account to load the request for. This will either be 0 for the service account or an app user ID for a specific user. App users will be needed for the Open With Element.
+
+An example config is available in `sample_config.js`.
 
 ## Running te Sample
 
@@ -57,3 +61,5 @@ The server will start. In a browser, load each of the UI Elements via the follow
 * Content Picker: http://localhost:3000/elements/contentPicker
 * Content Preview: http://localhost:3000/elements/contentPreview
 * Content Uploader: http://localhost:3000/elements/contentUploader
+* Content Open With: http://localhost:3000/elements/contentOpenWith
+* Content Open With Explorer: http://localhost:3000/elements/contentOpenWithExplorer
