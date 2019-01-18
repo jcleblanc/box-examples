@@ -30,7 +30,7 @@ const sdk = new BoxSDK({
   }
 });
 
-// Render element via serviceName = contentExplorer, contentPicker, contentPreview, contentUploader, contentOpenWith
+// Render element via serviceName = contentExplorer, contentPicker, contentPreview, contentUploader, contentOpenWith, contentSidebar
 app.get('/elements/:serviceName', (req, res) => {
   const service = req.params.serviceName;
   let client;

@@ -20,7 +20,8 @@ const tokenScopes = exports.tokenScopes = {
   contentPreview: 'base_preview item_download annotation_edit annotation_view_all annotation_view_self', 
   contentUploader: 'base_upload',
   contentOpenWith: 'item_readwrite root_readwrite',
-  contentOpenWithExplorer: 'root_readwrite'
+  contentOpenWithExplorer: 'root_readwrite',
+  contentSidebar: 'base_sidebar item_comment item_rename item_upload item_task'
 }
 
 // Element UI ID configurations (either folder or file ID to display)
@@ -28,7 +29,8 @@ const elementIds = exports.elementIds = {
   contentExplorer: '##FOLDER ID##',
   contentPicker: '##FOLDER ID##',
   contentPreview: '##FILE ID##',
-  contentUploader: '##FOLDER ID##'
+  contentUploader: '##FOLDER ID##',
+  contentSidebar: '##FILE ID##'
 }
 
 // Element UI ID configurations (either folder or file ID to display)
@@ -39,7 +41,8 @@ const elementIds = exports.elementIds = {
   contentPreview: { rid: '##FILE OR FOLDER ID##', fid: '##FILE OR FOLDER ID##', type: '##file or folder##' },  
   contentUploader: { rid: '##FILE OR FOLDER ID##', fid: '##FILE OR FOLDER ID##', type: '##file or folder##' },
   contentOpenWith: { rid: '##FILE OR FOLDER ID##', fid: '##FILE OR FOLDER ID##', type: '##file or folder##' },
-  contentOpenWithExplorer: { rid: '##FILE OR FOLDER ID##', fid: '##FILE OR FOLDER ID##', type: '##file or folder##' }
+  contentOpenWithExplorer: { rid: '##FILE OR FOLDER ID##', fid: '##FILE OR FOLDER ID##', type: '##file or folder##' },
+  contentSidebar: { rid: '##FILE ID##', fid: '##FILE ID##', type: 'file' }  
 }
 
 // User auth state, whether to auth as the enterprise (0) or get a user token (user ID)
@@ -49,5 +52,6 @@ const userAuth = exports.userAuth = {
   contentPreview: '##0 OR USER ID##',  
   contentUploader: '##0 OR USER ID##',
   contentOpenWith: '##0 OR USER ID##',
-  contentOpenWithExplorer: '##0 OR USER ID##'
+  contentOpenWithExplorer: '##0 OR USER ID##',
+  contentSidebar: '##0 OR USER ID##'
 }

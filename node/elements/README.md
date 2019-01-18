@@ -63,3 +63,4 @@ The server will start. In a browser, load each of the UI Elements via the follow
 * Content Uploader: http://localhost:3000/elements/contentUploader
 * Content Open With: http://localhost:3000/elements/contentOpenWith
 * Content Open With Explorer: http://localhost:3000/elements/contentOpenWithExplorer
+* Content Sidebar: http://localhost:3000/elements/contentSidebar
