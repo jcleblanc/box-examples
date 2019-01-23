@@ -3,4 +3,4 @@ const boxSDK = require('box-node-sdk');
 exports.boxSDK = boxSDK;
 
 // Account information
-const enterpriseId = exports.enterpriseId = '17404983';
+const enterpriseId = exports.enterpriseId = '--REDACTED--';
