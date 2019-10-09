@@ -1,0 +1,24 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "3.0.0-alpha.2",
+  "iOS" : [
+    {
+      "name" : "BoxSDK",
+      "hash" : "511149877761946da4e36d285a3f2e8bf00aecb671157117b39bcdde111a1c96",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    },
+    {
+      "name" : "Alamofire",
+      "hash" : "56258a630915976b4542644e4c0b08f44c01766e8c1091e15630206175a816c7",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
+    }
+  ]
+}
