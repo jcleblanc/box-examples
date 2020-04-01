@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+  head
+    title Box Content Explorer
+    script(src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl')
+    link(rel='stylesheet', href='https://cdn01.boxcdn.net/platform/elements/1.0.2/en-US/explorer.css')
+  body
+    div(class='container', style='height:600px')
+    
+    script(src='https://cdn01.boxcdn.net/platform/elements/1.0.2/en-US/explorer.js')
+      
+    script(type="text/javascript").
+      var folderId = '#{fid}';
+      var accessToken = '#{at}';
+      var contentExplorer = new Box.ContentExplorer();
+      contentExplorer.show(folderId, accessToken, {
+        container: '.container'
+      })

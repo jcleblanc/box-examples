@@ -1,0 +1,31 @@
+{
+  "name": "voicebase_aws",
+  "version": "0.0.1",
+  "description": "VoiceBase Audio Analysis Box Skill",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "box-node-sdk": "^1.17.0",
+    "fs": "0.0.1-security",
+    "lodash": "^4.17.10",
+    "querystring": "^0.2.0",
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "util": "^0.10.3",
+    "voicebase-node": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "voicebase",
+    "skill",
+    "box",
+    "skills"
+  ],
+  "author": "Jonathan LeBlanc",
+  "license": "ISC"
+}

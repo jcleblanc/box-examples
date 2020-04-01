@@ -1,0 +1,25 @@
+{
+  "name": "box-node-samples",
+  "version": "1.0.0",
+  "description": "Box Node Samples",
+  "main": "long_polling.js",
+  "scripts": {
+    "eslint": "./node_modules/eslint/bin/eslint.js ./"
+  },
+  "author": "Jonathan LeBlanc",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.1.3",
+    "eslint-plugin-import": "^2.2.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "box-node-sdk": "^1.7.0",
+    "express": "^4.15.4",
+    "jsonwebtoken": "^7.4.2",
+    "querystring": "^0.2.0",
+    "util": "^0.10.3",
+    "uuid": "^3.1.0"
+  }
+}

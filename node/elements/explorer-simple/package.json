@@ -1,0 +1,28 @@
+{
+  "name": "box-elements-sample",
+  "version": "1.0.0",
+  "description": "Box UI Elements sample integration",
+  "main": "sample_sdk.js",
+  "scripts": {
+    "eslint": "./node_modules/eslint/bin/eslint.js sample_sdk.js"
+  },
+  "author": "Jonathan LeBlanc",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0"
+  },
+  "dependencies": {
+    "box-node-sdk": "^1.24.1",
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jcleblanc/box-examples"
+  }
+}

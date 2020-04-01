@@ -1,0 +1,19 @@
+doctype html
+html(lang="en")
+  head
+    title Box Content Open With
+    script(src='https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl')
+    link(rel='stylesheet', href='https://cdn01.boxcdn.net/platform/elements/9.0.2/en-US/openwith.css')
+  body
+    div(class='container', style='height:600px;margin-left:100px;')
+    
+    script(src='https://cdn01.boxcdn.net/polyfills/core-js/2.5.3/core.min.js')
+    script(src='https://cdn01.boxcdn.net/platform/elements/9.0.2/en-US/openwith.js')
+      
+    script(type="text/javascript").
+      var fileId = '#{fid}';
+      var accessToken = '#{at}';
+      var contentOpenWith = new Box.ContentOpenWith();
+      contentOpenWith.show(fileId, accessToken, {
+        container: '.container'
+      })
