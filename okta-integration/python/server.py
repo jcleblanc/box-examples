@@ -39,14 +39,13 @@ def start():
 def box_auth():
   uid = g.user.id
 
+  # Instantiate Box Client instance
   auth = JWTAuth.from_settings_file('../config.json')
-  access_token = auth.authenticate_instance()
   box_client = Client(auth)
 
   # Validate is user exists
   url = f'https://api.box.com/2.0/users?external_app_user_id={uid}'
-  headers = {'Authorization': 'Bearer ' + access_token}
-  response = requests.get(url, headers=headers)
+  response = box_client.make_request('GET', url)
   user_info = response.json()
 
   # If user not found, create user, otherwise fetch user token
@@ -72,8 +71,8 @@ def box_auth():
     for item in items:
       print('{0} {1} is named "{2}"'.format(item.type.capitalize(), item.id, item.name))
 
-  return 'Test complete'
-
+    return 'Test complete'
+  
 # User logout
 @app.route("/logout")
 def logout():
