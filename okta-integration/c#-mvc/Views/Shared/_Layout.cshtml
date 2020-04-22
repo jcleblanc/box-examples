@@ -1,0 +1,29 @@
+﻿@using System.Security.Claims;
+@using System.Web;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - c__mvc</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <p class="navbar-text">Hello, @User.Identity.Name</p>
+        @foreach (var claim in ((ClaimsIdentity)User.Identity).Claims)
+        {
+            <dt title="@claim.Type">@claim.Type</dt>
+            <dd>@claim.Value</dd>
+        }
+    }
+    else
+    {
+        <a asp-controller="Account" asp-action="SignIn">Sign In</a>
+    }
+    @RenderBody()
+</body>
+</html>
